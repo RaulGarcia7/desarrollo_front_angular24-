@@ -1,0 +1,38 @@
+<div>
+    <h2>Formulario</h2>
+    <form>
+        <label for="name">Nombre: </label>
+        <input type="text" id="name" name="name" [(ngModel)]="newUser.name">
+        <br>
+        <label for="lastName">Apellido: </label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="newUser.lastName">
+        <br>
+        <label for="phone">Teléfono: </label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="newUser.phone">
+        <br>
+        <label for="birthday">Fecha de Nacimiento: </label>
+        <input type="date" id="birthday" name="birthday" [(ngModel)]="newUser.birthday">
+        <button type="submit" (click)="addUser()">Agregar Usuario</button>
+    </form>
+</div>
+<div>
+    <h2>Lista de Usuarios</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Fecha de Nacimiento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.birthday }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

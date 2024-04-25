@@ -1,0 +1,12 @@
+<div>
+    <h2>Lista de elementos</h2>
+    <ul>
+      <li *ngFor="let item of items; let i = index"> <!--ngFor permite iterar sobre listas y generar un li por cada item-->
+        {{ item }}
+        <button (click)="removeItem(i)">Eliminar</button>
+      </li>
+    </ul>
+    <input type="text" [(ngModel)]="newItem">   <!--ngModel permite actualizar cte los cambios de valor de newItem-->
+    <button (click)="addItem(newItem)">Agregar elemento</button>
+  </div>
+  
