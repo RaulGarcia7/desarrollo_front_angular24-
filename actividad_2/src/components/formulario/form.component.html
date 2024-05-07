@@ -1,0 +1,36 @@
+<div>
+    <h1>Formulario</h1>
+    <h3>Rellene los siguientes datos para registrarse</h3>
+</div>
+<div [formGroup]="formulario">
+    <div>
+        <label for="name">Name:</label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="lastName">Last name:</label>
+        <input id="lastName" type="text" formControlName="lastName">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="6 caracteres" formControlName="password">
+    </div>
+    <div>
+        <label for="phone">Phone number:</label>
+        <input id="phone" type="tel" formControlName="phone">
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <input id="age" type="number" formControlName="age">
+    </div>
+    <div>
+        <label for="country">Country:</label>
+        <input id="country" type="text" formControlName="country">
+    </div>  
+</div>
+
+<button [disabled]="!formulario.valid" (click)="sendData()">Submit</button>

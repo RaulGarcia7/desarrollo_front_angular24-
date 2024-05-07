@@ -1,0 +1,23 @@
+<h1>Componente tabla</h1>
+
+<button (click)="toggleHeaderStyle()">Cambiar Estilo</button>
+<table>
+  <thead>
+    <tr>
+      <ng-container *ngFor="let column of columns; let j = index">
+        <!-- Mostrar solo las primeras 6 columnas si showExtraColumns es falso -->
+        <th *ngIf="showExtraColumns || j < 6" [class.normal-header]="!highlightHeader" [class.highlight-header]="highlightHeader">
+          {{ column }}
+        </th>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows; let i = index">
+      <ng-container *ngFor="let cell of row; let j = index">
+        <!-- Mostrar solo las primeras 5 y las dos últimas columnas si showExtraColumns es verdadero -->
+        <td *ngIf="showExtraColumns ? (j < 4 || j >= 6) : (j < 6)">{{ cell }}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
