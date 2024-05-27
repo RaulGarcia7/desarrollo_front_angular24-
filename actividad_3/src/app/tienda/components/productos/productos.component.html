@@ -1,0 +1,8 @@
+<div *ngFor="let producto of productos">
+    <div (click)="showProduct(producto.id)">
+      <h3>{{ producto.title }}</h3>
+      <img [src]="producto.image" alt="{{ producto.title }}" width="100">
+      <p>{{ producto.price | currency }}</p>
+    </div>
+  </div>
+  
