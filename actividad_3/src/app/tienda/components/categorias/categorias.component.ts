@@ -7,7 +7,6 @@ import { FakeApi } from 'src/app/services/fake.service';
   templateUrl: './categorias.component.html'
 })
 export class CategoriasComponent implements OnInit {
-
   categorias: string[] = [];
 
   constructor(
