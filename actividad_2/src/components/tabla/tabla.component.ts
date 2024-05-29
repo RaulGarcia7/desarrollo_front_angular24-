@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TablaComponent {
   columns: string[] = ['Columna 1', 'Columna 2', 'Columna 3', 'Columna 4', 'Columna 5', 'Columna 6', 'Columna Adicional 1', 'Columna Adicional 2'];
-  rows: any[] = [];
+  rows: number[][] = [];
   showExtraColumns = false;
   highlightHeader = false;
 
