@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FakeApi } from 'src/app/services/fake.service';
+import { FakeApi, Producto } from 'src/app/services/fake.service';
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
 })
 export class ProductosComponent implements OnInit {
-  productos: any[] = [];
+  productos: Producto[] = [];
   categoria: string = '';
 
   constructor(
