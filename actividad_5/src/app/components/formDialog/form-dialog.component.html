@@ -1,0 +1,16 @@
+<h1>Formulario</h1>
+<form (ngSubmit)="submitForm()">
+    <div>
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="nombre" name="nombre" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email" required>
+        <br>
+        <label>Dirección:</label>
+        <input type="text" [(ngModel)]="direccion" name="direccion" required>
+    </div>
+    <br>
+    <button type="button" (click)="closeDialog()">Cancelar</button>
+    <button type="submit">Enviar</button>
+</form>

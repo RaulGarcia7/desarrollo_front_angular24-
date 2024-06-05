@@ -1,0 +1,29 @@
+<div style="display: block;">
+  <h3>Goles marcados Real Madrid 23/24</h3>
+  <br>
+  <ngx-charts-line-chart
+      [results]="lineChartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Partidos"
+      yAxisLabel="Goles marcados"
+  ></ngx-charts-line-chart>
+</div>
+
+<div style="display: block;">
+  <h3>Recaudación Django Unchained en cartelera</h3>
+  <br>
+  <ngx-charts-bar-vertical
+      [results]="barChartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Semana"
+      yAxisLabel="Dinero recaudado"
+  ></ngx-charts-bar-vertical>
+</div>

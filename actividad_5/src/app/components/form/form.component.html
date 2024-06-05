@@ -1,0 +1,8 @@
+<button (click)="openDialog()">Ver formulario</button>
+
+<div *ngIf="formData">
+    <h2>Datos recogidos por el formulario:</h2>
+    <p>Nombre: {{ formData.nombre }}</p>
+    <p>Email: {{ formData.email }}</p>
+    <p>Dirección: {{ formData.direccion }}</p>
+</div>
